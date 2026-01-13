@@ -58,12 +58,7 @@ body {
 /* =======================
    IMAGE PANEL
 ======================= */
-.image-panel {
-  position: relative;
-  height: 100vh;
-  background: url("image.png") center center / cover no-repeat;
-  padding: 0;
-}
+.image-panel { position: relative; height: 100vh; background: url("image.png") center center / cover no-repeat; padding: 0; }
 
 .image-overlay {
   position: absolute;
@@ -271,3 +266,4 @@ hr {
 .btn-accent:hover {
   background: #22c3ae;
 }
+
