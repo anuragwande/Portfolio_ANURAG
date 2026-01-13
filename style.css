@@ -126,4 +126,13 @@ hr {
   color: #2dd4bf;
   font-weight: bold;
   margin-bottom: 40px;
+
+}
+
+.social-icons a {
+  text-decoration: none;
+}
+
+.social-icons a i:hover {
+  color: #5eead4;
 }
