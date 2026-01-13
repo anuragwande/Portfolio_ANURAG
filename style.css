@@ -1,3 +1,6 @@
+/* =======================
+   GLOBAL RESET
+======================= */
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +18,46 @@ body {
   height: 100vh;
 }
 
-/* LEFT IMAGE FULL COVER PANEL */
+/* =======================
+   ICON SIDEBAR
+======================= */
+.icon-sidebar {
+  width: 70px;
+  background: #0b0f14;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px; /* aesthetic spacing */
+}
+
+.icon-sidebar a {
+  color: #64748b;
+  font-size: 18px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.icon-sidebar a:hover {
+  color: #2dd4bf;
+  background: rgba(45, 212, 191, 0.08);
+}
+
+.icon-sidebar a.active,
+.icon-sidebar a .active {
+  color: #2dd4bf;
+  background: rgba(45, 212, 191, 0.15);
+}
+
+/* =======================
+   IMAGE PANEL
+======================= */
 .image-panel {
   position: relative;
   height: 100vh;
@@ -23,20 +65,17 @@ body {
   padding: 0;
 }
 
-/* COLOR GRADING + LIGHTING OVERLAY */
 .image-overlay {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(15, 23, 42, 0.6) 0%,
-      rgba(2, 6, 23, 0.85) 100%
-    );
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.6) 0%,
+    rgba(2, 6, 23, 0.85) 100%
+  );
   z-index: 1;
 }
 
-/* TEXT OVER IMAGE */
 .image-content {
   position: absolute;
   bottom: 40px;
@@ -54,6 +93,9 @@ body {
   margin-bottom: 15px;
 }
 
+/* =======================
+   SOCIAL ICONS
+======================= */
 .social-icons i {
   font-size: 20px;
   margin-right: 12px;
@@ -61,10 +103,13 @@ body {
   cursor: pointer;
 }
 
-/* RIGHT PANEL */
+/* =======================
+   RIGHT PANEL
+======================= */
 .right-panel {
   padding: 50px;
   background-color: #0e1116;
+  overflow-y: auto;
 }
 
 .title {
@@ -80,6 +125,7 @@ body {
 
 .summary {
   color: #cbd5e1;
+  max-width: 700px;
 }
 
 .section-title {
@@ -87,6 +133,9 @@ body {
   margin-bottom: 20px;
 }
 
+/* =======================
+   SKILLS
+======================= */
 .skill {
   margin-bottom: 15px;
 }
@@ -100,86 +149,17 @@ body {
   background-color: #2dd4bf;
 }
 
+/* =======================
+   SEPARATOR
+======================= */
 hr {
   border: 1px solid #1f2933;
   margin: 30px 0;
 }
-/* ICON SIDEBAR */
-.icon-sidebar {
-  width: 70px;
-  background: #0b0f14;
-  padding: 20px 0;
-}
 
-.icon-sidebar i {
-  color: #64748b;
-  font-size: 18px;
-  margin: 20px 0;
-  cursor: pointer;
-}
-
-.icon-sidebar i:hover {
-  color: #2dd4bf;
-}
-
-.logo {
-  color: #2dd4bf;
-  font-weight: bold;
-  margin-bottom: 40px;
-}
-
-body {
-  background:#0e1116;
-  color:#fff;
-  font-family:Segoe UI,sans-serif;
-}
-
-.main-container { height:100vh; }
-
-.icon-sidebar {
-  width:70px;
-  background:#0b0f14;
-  padding:20px 0;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-
-.icon-sidebar a {
-  color:#64748b;
-  font-size:18px;
-  margin:20px 0;
-}
-
-.icon-sidebar a:hover,
-.icon-sidebar .active {
-  color:#2dd4bf;
-}
-
-.image-panel {
-  background:url("profile.jpg") center/cover no-repeat;
-  position:relative;
-}
-
-.image-overlay {
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg,rgba(15,23,42,.6),rgba(2,6,23,.85));
-}
-
-.image-content {
-  position:absolute;
-  bottom:40px;
-  left:40px;
-}
-
-.text-accent { color:#2dd4bf; }
-
-.right-panel { padding:50px; }
-
-.progress { height:6px; background:#1f2933; }
-.progress-bar { background:#2dd4bf; }
-/* PROJECT CARDS */
+/* =======================
+   PROJECT CARDS
+======================= */
 .project-card {
   background: #0b0f14;
   border: 1px solid #1f2933;
@@ -215,7 +195,10 @@ body {
   background: rgba(45, 212, 191, 0.1);
   color: #2dd4bf;
 }
-/* CONTACT PAGE */
+
+/* =======================
+   CONTACT PAGE
+======================= */
 .contact-card {
   background: #0b0f14;
   border: 1px solid #1f2933;
@@ -243,111 +226,6 @@ body {
   margin-right: 12px;
 }
 
-/* FORM STYLING */
-.custom-input {
-  background: #0e1116;
-  border: 1px solid #1f2933;
-  color: #fff;
-}
-
-.custom-input::placeholder {
-  color: #64748b;
-}
-
-.custom-input:focus {
-  background: #0e1116;
-  color: #fff;
-  border-color: #2dd4bf;
-  box-shadow: 0 0 0 0.15rem rgba(45,212,191,0.2);
-}
-
-/* BUTTON */
-.btn-accent {
-  background: #2dd4bf;
-  color: #0b0f14;
-  border: none;
-  padding: 8px 22px;
-  border-radius: 30px;
-  font-weight: 500;
-}
-
-.btn-accent:hover {
-  background: #22c3ae;
-}
-/* GENERAL */
-body {
-  background: #0e1116;
-  color: #ffffff;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.main-container {
-  height: 100vh;
-}
-
-/* SIDEBAR */
-.icon-sidebar {
-  width: 70px;
-  background: #0b0f14;
-  padding: 20px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.icon-sidebar a {
-  color: #64748b;
-  font-size: 18px;
-  margin: 20px 0;
-}
-
-.icon-sidebar a:hover,
-.icon-sidebar .active {
-  color: #2dd4bf;
-}
-
-/* RIGHT PANEL */
-.right-panel {
-  padding: 50px;
-}
-
-.title {
-  font-size: 42px;
-  font-weight: bold;
-  text-transform: lowercase;
-}
-
-.summary {
-  color: #cbd5e1;
-  max-width: 700px;
-}
-
-/* CONTACT */
-.contact-card {
-  background: #0b0f14;
-  border: 1px solid #1f2933;
-  border-radius: 14px;
-  padding: 25px;
-}
-
-.contact-card h5 {
-  color: #2dd4bf;
-  margin-bottom: 20px;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-  font-size: 14px;
-}
-
-.contact-item i {
-  color: #2dd4bf;
-  font-size: 18px;
-  margin-right: 12px;
-}
-
 .contact-link {
   color: #cbd5e1;
   text-decoration: none;
@@ -358,7 +236,9 @@ body {
   text-decoration: underline;
 }
 
-/* FORM */
+/* =======================
+   FORM
+======================= */
 .custom-input {
   background: #0e1116;
   border: 1px solid #1f2933;
@@ -376,7 +256,9 @@ body {
   box-shadow: 0 0 0 0.15rem rgba(45, 212, 191, 0.25);
 }
 
-/* BUTTON */
+/* =======================
+   BUTTON
+======================= */
 .btn-accent {
   background: #2dd4bf;
   color: #0b0f14;
