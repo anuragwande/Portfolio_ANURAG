@@ -136,3 +136,9 @@ hr {
 .social-icons a i:hover {
   color: #5eead4;
 }
+.right-panel {
+  padding: 50px;
+  background-color: #0e1116;
+  overflow-y: auto;
+}
+
